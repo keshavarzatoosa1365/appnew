@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form action="" method="POST">
+{% csrf_token %}
+{{q.objects.count}}
+{% for Q in q%}
+<h1>{{Q}}</h1>
+{{form}}
+<ul>
+<li>
+<li>
+{{A.Answer_text}}
+</li>
+</ul>
+{%endfor%}
+  {% comment %} <label for="fname">First name:</label><br> {% endcomment %}
+  {% comment %} <input type="text" id="fname" name="fname" value="John"><br> {% endcomment %}
+  {% comment %} <label for="lname">Last name:</label><br> {% endcomment %}
+  {% comment %} <input type="text" id="lname" name="lname" value="Doe"><br><br> {% endcomment %}
+  <input type="submit" value="Submit">
+</form> 
+
+{% comment %} <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p> {% endcomment %}
+
+</body>
+</html>
